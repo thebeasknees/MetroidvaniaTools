@@ -54,5 +54,15 @@ namespace MetroidvaniaTools
             }
             return false;
         }
+
+        protected virtual bool Falling(float velocity)
+        {
+            if (!isGrounded && rb.velocity.y < velocity)
+            {
+                return true;
+            }
+            else
+                return false;
+        }
     }
 }
